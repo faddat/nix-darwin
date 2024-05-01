@@ -54,7 +54,7 @@
     };
   };
 
-
+nixpkgs.config.allowUnsupportedSystem = true; 
 
       
 
