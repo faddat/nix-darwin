@@ -39,9 +39,21 @@
 
       nix.settings.extra-trusted-users = [ "faddat" ];
 
+  nix.linux-builder = {
+    enable = true;
+    ephemeral = true;
+    maxJobs = 4;
+    config = {
+      virtualisation = {
+        darwin-builder = {
+          diskSize = 40 * 1024;
+          memorySize = 32 * 1024;
+        };
+        cores = 6;
+      };
+    };
+  };
 
-
-      nix.linux-builder.enable = true;
 
 
       
